@@ -15,3 +15,5 @@ function iniciarSlideshow() {
         mostrarFoto(fotoAtual);
     }, 3000); // Troca de foto a cada 3 segundos
 }
+// Iniciar a transição assim que a página carregar
+document.addEventListener('DOMContentLoaded', iniciarSlideshow);
