@@ -25,6 +25,7 @@ main {
 }
 
 .galeria img {
+    display: none;
     width: 300px;
     height: 200px;
     margin: 10px;
@@ -48,4 +49,5 @@ footer {
 
 .galeria img.ativa {
     opacity: 1; /* A foto ativa fica visível */
+    display: block;
 }
