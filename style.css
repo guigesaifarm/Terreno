@@ -45,8 +45,3 @@ footer {
     padding: 10px;
     text-align: center;
 }
-
-.galeria img.ativa {
-    opacity: 1; /* A foto ativa fica visível */
-    display: block;
-}
