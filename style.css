@@ -19,20 +19,18 @@ main {
 }
 
 .galeria {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .galeria img {
-    display: flex;
     width: 300px;
     height: 200px;
     margin: 10px;
     border: 5px solid #fff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    opacity: 0; /* Todas as fotos começam invisíveis */
-    transition: opacity 0.5s ease-in-out; /* Transição suave de opacidade */
 }
 
 #descricao, #informacoes, #formulario {
