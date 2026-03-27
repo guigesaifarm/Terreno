@@ -601,7 +601,7 @@
 
                     <!-- Social/WhatsApp CTA -->
                     <div class="mt-8 flex gap-4">
-                        <a href="https://wa.me/5583996018715" target="_blank" class="flex-1 bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5583996936245" target="_blank" class="flex-1 bg-green-500 hover:bg-green-600 text-white py-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2">
                             <i class="fab fa-whatsapp text-2xl"></i>
                             Chamar no WhatsApp
                         </a>
@@ -615,51 +615,76 @@
                             Envie sua mensagem
                         </h3>
                         
-                        <form id="contactForm" class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
-                                <input type="text" name="nome" required
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
-                                    placeholder="Seu nome">
-                            </div>
-                            
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                                    <input type="email" name="email" required
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
-                                        placeholder="seu@email.com">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-                                    <input type="tel" name="telefone" required
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
-                                        placeholder="(00) 00000-0000">
-                                </div>
-                            </div>
+                      <form id="contactForm" action="https://formsubmit.co/guigesaifarm@gmail.com" method="POST" class="space-y-4">
+    
+    <!-- Configurações do FormSubmit -->
+    <input type="hidden" name="_subject" value="Novo contato do site - Terreno Solânea">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_autoresponse" value="Obrigado pelo contato! Recebi sua mensagem e responderei em breve. - Guilherme">
+    
+    <!-- Nome -->
+    <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
+        <input type="text" name="nome" required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
+            placeholder="Seu nome">
+    </div>
+    
+    <!-- Email e Telefone -->
+    <div class="grid grid-cols-2 gap-4">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+            <input type="email" name="email" required
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
+                placeholder="seu@email.com">
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+            <input type="tel" name="telefone" required
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
+                placeholder="(00) 00000-0000"
+                oninput="this.value = mascaraTelefone(this.value)">
+        </div>
+    </div>
 
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Interesse</label>
-                                <select name="interesse" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
-                                    <option>Moradia</option>
-                                    <option>Investimento</option>
-                                    <option>Comércio</option>
-                                    <option>Outro</option>
-                                </select>
-                            </div>
+    <!-- Interesse -->
+    <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Interesse</label>
+        <select name="interesse" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+            <option value="Moradia">Moradia</option>
+            <option value="Investimento">Investimento</option>
+            <option value="Comércio">Comércio</option>
+            <option value="Outro">Outro</option>
+        </select>
+    </div>
 
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
-                                <textarea name="mensagem" rows="4" required
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-none"
-                                    placeholder="Conte-me mais sobre seu interesse..."></textarea>
-                            </div>
+    <!-- Mensagem -->
+    <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+        <textarea name="mensagem" rows="4" required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-none"
+            placeholder="Conte-me mais sobre seu interesse..."></textarea>
+    </div>
 
-                            <button type="submit" class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition flex items-center justify-center gap-2">
-                                <i class="fas fa-paper-plane"></i>
-                                Enviar Mensagem
-                            </button>
-                        </form>
+    <!-- Botão -->
+    <button type="submit" class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition flex items-center justify-center gap-2">
+        <i class="fas fa-paper-plane"></i>
+        Enviar Mensagem
+    </button>
+</form>
+
+<!-- Script para máscara de telefone -->
+<script>
+function mascaraTelefone(valor) {
+    return valor
+        .replace(/\D/g, '')                    // Remove tudo que não é dígito
+        .replace(/^(\d{2})(\d)/g, '($1) $2')   // Coloca parênteses em volta dos dois primeiros dígitos
+        .replace(/(\d)(\d{4})$/, '$1-$2')      // Coloca hífen entre o 5º e 6º dígito
+        .substr(0, 15);                        // Limita a 15 caracteres
+}
+</script>
+                      
 
                         <p class="text-xs text-gray-500 mt-4 text-center">
                             Ao enviar, você concorda em receber contato sobre este imóvel.
@@ -678,11 +703,11 @@
                 <p class="font-bold text-primary text-lg">Terreno em Solânea - R$ 80.000,00</p>
             </div>
             <div class="flex gap-3">
-                <a href="https://wa.me/5583996018715" target="_blank" class="px-6 py-3 bg-green-500 text-white rounded-full font-bold hover:bg-green-600 transition flex items-center gap-2">
+                <a href="https://wa.me/5583996936245" target="_blank" class="px-6 py-3 bg-green-500 text-white rounded-full font-bold hover:bg-green-600 transition flex items-center gap-2">
                     <i class="fab fa-whatsapp"></i>
                     WhatsApp
                 </a>
-                <a href="tel:83996018715" class="px-6 py-3 bg-primary text-white rounded-full font-bold hover:bg-primary/90 transition flex items-center gap-2">
+                <a href="tel:83996936245" class="px-6 py-3 bg-primary text-white rounded-full font-bold hover:bg-primary/90 transition flex items-center gap-2">
                     <i class="fas fa-phone"></i>
                     Ligar
                 </a>
@@ -713,7 +738,7 @@
                 <div>
                     <h4 class="font-bold mb-4">Contato</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><i class="fas fa-phone mr-2"></i>(83) 99601-8715</li>
+                        <li><i class="fas fa-phone mr-2"></i>(83) 99693-6245</li>
                         <li><i class="fas fa-envelope mr-2"></i>guigesaifarm@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt mr-2"></i>Solânea, PB</li>
                     </ul>
